@@ -48,6 +48,7 @@ bin/
 .DS_Store
 
 ### Jetbrains ###
-.idea/
+.idea/*
 !.idea/icon.png
 !.idea/icon.svg
+!.idea/copyright/
