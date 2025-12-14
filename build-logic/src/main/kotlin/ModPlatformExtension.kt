@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2025 rotgrunegelb
+ * See the LICENSE file in the project root for license terms.
+ */
+
 @file:Suppress("unused")
 
 import org.gradle.api.Action

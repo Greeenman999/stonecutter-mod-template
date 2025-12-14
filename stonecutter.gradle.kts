@@ -1,3 +1,10 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2025 rotgrunegelb
+ * Copyright (c) 2025 murder_spagurder (from murderspagurder/mod-template-java)
+ * See the LICENSE file in the project root for license terms.
+ */
+
 plugins {
 	alias(libs.plugins.stonecutter)
 	alias(libs.plugins.dotenv)

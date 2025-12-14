@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+#
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 rotgrunegelb
+# See the LICENSE file in the project root for license terms.
+#
+
 PROTECTED_FILES=(".sc_active_version")
 STAGED=$(git diff --cached --name-only)
 

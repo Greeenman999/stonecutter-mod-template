@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2025 rotgrunegelb
+ * See the LICENSE file in the project root for license terms.
+ */
+
 package com.example.modtemplate.event;
 
 import com.example.modtemplate.ModTemplate;
