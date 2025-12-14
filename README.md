@@ -173,7 +173,6 @@ The current setup uses Fabric data generation for both platforms.
 ### Help and Support
 For help and support, consider the following places:
 - ["Kiku's Realm" Discord Server](https://discord.kikugie.dev/) for Stonecutter-related questions.
-- ["Cascading Colors" (My) Discord Server](https://discord.gg/aunYJB4wz9) for questions about this template and its setup.
 - ["The NeoForge Project" Discord Server](https://github.com/neoforged) for NeoForge-related questions.
 - ["The Fabric Project" Discord Server](https://discord.gg/v6v4pMv) for Fabric-related questions.
 
@@ -182,6 +181,7 @@ For help and support, consider the following places:
 This template is provided under the MIT License.
 Check `LICENSE` for details.
 
-* Based on [murderspagurder/mod-template-java](https://github.com/murderspagurder/mod-template-java)
-  * Adapted from [KikuGie's Elytra Trims](https://github.com/kikugie/elytra-trims) setup
+* Based on [rotgruengelb/stonecutter-mod-template](https://github.com/rotgruengelb/stonecutter-mod-template)
+  * Based on [murderspagurder/mod-template-java](https://github.com/murderspagurder/mod-template-java)
+    * Adapted from [KikuGie's Elytra Trims](https://github.com/kikugie/elytra-trims) setup
 * Uses [Stonecutter](https://stonecutter.kikugie.dev/) by KikuGie
