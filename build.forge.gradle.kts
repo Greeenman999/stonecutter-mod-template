@@ -2,13 +2,13 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2025 rotgrunegelb
  * Copyright (c) 2025 murder_spagurder (from murderspagurder/mod-template-java)
- * Copyright (c) 2025 Greenman999
  * See the LICENSE file in the project root for license terms.
  */
+import org.gradle.kotlin.dsl.register
 
 plugins {
 	id("mod-platform")
-	id("net.minecraftforge.gradle")
+	id("net.neoforged.moddev.legacyforge")
 }
 
 platform {
@@ -23,32 +23,26 @@ platform {
 	}
 }
 
-minecraft {
-	mappings
-}
+legacyForge {
+	version = "${property("deps.minecraft")}-${property("deps.forge")}"
 
-neoForge {
-	version = property("deps.forge") as String
-	accessTransformers.from(rootProject.file("src/main/resources/aw/${stonecutter.current.version}.cfg"))
 	validateAccessTransformers = true
 
-	if (hasProperty("deps.parchment")) parchment {
-		val (mc, ver) = (property("deps.parchment") as String).split(':')
-		mappingsVersion = ver
-		minecraftVersion = mc
-	}
+	accessTransformers.from(
+		rootProject.file("src/main/resources/aw/${stonecutter.current.version}.cfg")
+	)
 
 	runs {
 		register("client") {
 			client()
 			gameDirectory = file("run/")
-			ideName = "NeoForge Client (${stonecutter.active?.version})"
+			ideName = "Forge Client (${stonecutter.active?.version})"
 			programArgument("--username=Dev")
 		}
 		register("server") {
 			server()
 			gameDirectory = file("run/")
-			ideName = "NeoForge Server (${stonecutter.active?.version})"
+			ideName = "Forge Server (${stonecutter.active?.version})"
 		}
 	}
 
@@ -57,12 +51,19 @@ neoForge {
 			sourceSet(sourceSets["main"])
 		}
 	}
-	sourceSets["main"].resources.srcDir("${rootDir}/versions/datagen/${stonecutter.current.version.split("-")[0]}/src/main/generated")
 }
 
 dependencies {
 	implementation(libs.moulberry.mixinconstraints)
 	jarJar(libs.moulberry.mixinconstraints)
+}
+
+sourceSets {
+	main {
+		resources.srcDir(
+			"${rootDir}/versions/datagen/${stonecutter.current.version.split("-")[0]}/src/main/generated"
+		)
+	}
 }
 
 tasks.named("createMinecraftArtifacts") {
