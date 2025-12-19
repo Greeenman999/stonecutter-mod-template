@@ -288,7 +288,7 @@ abstract class ModPlatformPlugin @Inject constructor() : Plugin<Project> {
 			additionalFiles.from(srcJarTask.flatMap(Jar::getArchiveFile))
 			type = releaseType
 			version = fullVersion
-			changelog.set(rootProject.file("CHANGELOG.md").readText())
+			changelog.set(rootProject.file("CHANGELOG-latest.md").readText())
 			modLoaders.add(loader)
 
 			displayName = "${prop("mod.name")} $modVersion ${loader.replaceFirstChar(Char::titlecase)} $currentVersion"
