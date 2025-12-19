@@ -217,6 +217,9 @@ abstract class ModPlatformPlugin @Inject constructor() : Plugin<Project> {
 			withSourcesJar()
 			sourceCompatibility = requiredJava
 			targetCompatibility = requiredJava
+			toolchain {
+				languageVersion.set(JavaLanguageVersion.of(requiredJava.majorVersion.toInt()))
+			}
 		}
 	}
 
