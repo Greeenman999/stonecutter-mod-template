@@ -34,18 +34,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Prepare git-cliff
-        run: |
-          REPO_URL="https://github.com/${{ github.repository }}"
-          sed -i "s|%%%repo_url%%%|${REPO_URL}|g" cliff.toml
-
-      - name: Generate changelog with git-cliff
-        id: cliff
-        uses: orhun/git-cliff-action@v4
-        with:
-          args: --latest --strip header --output CHANGELOG.md
-          version: 'v2.10.1'
-
       - name: Read gradle.properties values
         id: read-props
         run: |
@@ -80,12 +68,6 @@ jobs:
             exit 1
           fi
           echo "✓ Tag matches version."
-
-      - name: Upload changelog
-        uses: actions/upload-artifact@v4
-        with:
-          name: changelog
-          path: CHANGELOG.md
 
   github-release:
     name: Release to GitHub
