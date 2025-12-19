@@ -24,7 +24,9 @@ platform {
 }
 
 legacyForge {
-	version = "${property("deps.minecraft")}-${property("deps.forge")}"
+	enable {
+		forgeVersion = "${property("deps.minecraft")}-${property("deps.forge")}"
+	}
 
 	validateAccessTransformers = true
 
