@@ -31,7 +31,7 @@ you ([Alternative Templates](https://stonecutter.kikugie.dev/wiki/tips/multiload
 #### 1. **Clone or use this template**
 
 ```bash
-git clone https://github.com/rotgruengelb/stonecutter-mod-template.git
+git clone https://github.com/Greeenman999/stonecutter-mod-template.git
 cd stonecutter-mod-template
 ```
 
@@ -60,9 +60,9 @@ Edit `gradle.properties` to set your mod's metadata:
 | `mod.contributors` | Contributor names, comma-separated           | `ContributorName, AnotherContributorName`                         |
 | `mod.license`      | License type                                 | `MIT`                                                             |
 | `mod.description`  | Short mod description                        | `Example Description`                                             |
-| `mod.sources_url`  | Link to your source code repository          | `https://github.com/rotgruengelb/stonecutter-mod-template`        |
-| `mod.homepage_url` | Mod homepage or info page                    | `https://github.com/rotgruengelb/stonecutter-mod-template`        |
-| `mod.issues_url`   | Link to issue tracker                        | `https://github.com/rotgruengelb/stonecutter-mod-template/issues` |
+| `mod.sources_url`  | Link to your source code repository          | `https://github.com/Greeenman999/stonecutter-mod-template`        |
+| `mod.homepage_url` | Mod homepage or info page                    | `https://github.com/Greeenman999/stonecutter-mod-template`        |
+| `mod.issues_url`   | Link to issue tracker                        | `https://github.com/Greeenman999/stonecutter-mod-template/issues` |
 | `mod.discord_url`  | Link to a Discord invite                     | `https://discord.gg/aunYJB4wz9`                                   |
 
 Dependencies/Properties that are specific to a version/loader 
