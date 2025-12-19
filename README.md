@@ -82,6 +82,10 @@ Rename these files to match your `mod.id`:
 
 Replace and `src/main/resources/assets/icon.png` and `.idea/icon.png` with the mods icon.
 
+#### 7. Configure git-cliff
+
+Run `sed -i "s|%%%repo_url%%%|YOUR_REPO_URL|g" cliff.toml` to set your repository URL for changelog generation.
+
 ## Development
 
 ### Stonecutter
