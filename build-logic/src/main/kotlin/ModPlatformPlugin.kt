@@ -14,6 +14,7 @@ import org.gradle.api.JavaVersion
 import org.gradle.api.NamedDomainObjectContainer
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.file.DuplicatesStrategy
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.Copy
@@ -100,6 +101,11 @@ abstract class ModPlatformPlugin @Inject constructor() : Plugin<Project> {
 	private fun Project.configureJarTask(modId: String) {
 		tasks.withType<Jar>().configureEach {
 			archiveBaseName.set(modId)
+			duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+			from(rootProject.file("LICENSE")) {
+				rename { "${it}_${modId}" }
+			}
 		}
 	}
 
